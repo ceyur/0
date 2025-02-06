@@ -1,0 +1,184 @@
+* {
+	margin: 0;
+	font-size: 25px;
+	font-family: Arial;
+	color: #000;
+	text-decoration: none;
+}
+h1 {
+	font-size: 37px;
+}
+header {
+	height: 30px;
+	width: calc(100% - 50px);
+	padding: 25px;
+	position: absolute;
+	left: 0;
+	display: flex;
+	span {
+		flex: 1 1 1%;
+	}
+	a {
+		margin: 5px 0 0 25px;
+		font-size: 20px;
+		&:first-child {
+			margin: 2px 0;
+			div {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				background: url("../img/logo.ico") 0 0/100% 100%;
+			}
+		}
+	}
+}
+.header {
+	height: calc(100vh - 160px);
+	background: url("../img/Кактусы.jpg") 50% 0/auto 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	padding: 80px 20%;
+}
+.button {
+	display: none;
+	background: #fff;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	+ div {
+		display: none;
+		position: absolute;
+		padding: 10px;
+		border-radius: 15px;
+		background: #fff;
+		top: 25px;
+		right: 25px;
+		width: 160px;
+		a {
+			color: #000;
+			display: block;
+			margin: 5px;
+			&:first-child {
+				display: none;
+				+ a {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 30px;
+				}
+			}
+		}
+	}
+}
+#menu:target {
+	.button + div {
+		display: block;
+	}
+}
+.hpages {
+	position: relative;
+	background: url("../img/header.png") 50% 5%/auto 400%;
+	a {
+		color: #fff;
+	}
+}
+@media (max-width: 515px) {
+	.a {
+		display: none;
+	}
+	.button {
+		display: inline;
+	}
+}
+.catalog {
+	padding: 12.5px;
+	min-height: 100vh;
+	> div {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		> div {
+			width: calc(25% - 25px);
+			margin: 12.5px;
+			img {
+				width: 100%;
+			}
+			.name {
+				margin: 3px 0 0;
+				text-align: center;
+				font-size: 30px;
+			}
+		}
+	}
+}
+.cpages {
+	min-height: calc(100vh - 130px)
+}
+@media (max-width: 550px) {
+	.catalog > div > div {
+		width: calc(100% - 25px);
+	}
+}
+@media (min-width: 551px) and (max-width: 700px) {
+	.catalog > div > div {
+		width: calc(50% - 25px);
+	}
+}
+@media (min-width: 701px) and (max-width: 1050px) {
+	.catalog > div > div {
+		width: calc(33.33% - 25px);
+	}
+}
+.information {
+	display: flex;
+	height: calc(100vh - 50px);
+	padding: 25px;
+	text-align: center;
+	img {
+		display: block;
+		margin: 0 0 0 25px;
+	}
+}
+@media (max-width: 1300px) {
+	.information img {
+		display: none;
+	}
+}
+.contacts {
+	display: flex;
+	height: calc(100vh - 50px);
+	padding: 25px;
+	justify-content: space-between;
+	> div:first-child {
+		margin: 0 0 25px;
+	}
+	img {
+		display: none;
+		width: 100%;
+	}
+	> div:last-child {
+		background: #fff url("../img/map.png") 100% 0/contain no-repeat;
+		display: block;
+		width: calc(100% - 250px);
+		height: 100%;
+	}
+}
+.ipages {
+	height: calc(100vh - 130px);
+}
+@media (orientation: portrait) {
+	.contacts {
+		display: block;
+		img {
+			display: block;
+		}
+		> div:last-child {
+			display: none;
+		}
+	}
+}
